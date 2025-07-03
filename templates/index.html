@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fashion MNIST Classifier</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fashion-MNIST Classifier</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required><br><br>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <h3>Prediction:</h3>
+                <p>{{ prediction }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
